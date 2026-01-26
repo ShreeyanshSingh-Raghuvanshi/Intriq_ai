@@ -807,6 +807,11 @@ async def gap_analysis(data: PremiumRequest):
     response = call_groq(prompt)
     return json.loads(response)
 
+@app.get("/health")
+def health():
+    return {"status": "ok"}
+
+
 if __name__ == "__main__":
     import uvicorn
     # NOTE: This runs on port 8000. 
