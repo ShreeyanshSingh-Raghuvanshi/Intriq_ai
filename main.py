@@ -808,7 +808,7 @@ async def gap_analysis(data: PremiumRequest):
     return json.loads(response)
 
 @app.head("/health")
-def health(response :Response):
+def health(response: Response):
     response.headers["X-version"] = "1.0"
     return Response(status_code=200)
 
